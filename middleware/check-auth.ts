@@ -1,7 +1,8 @@
-import HttpError from "../models/http-error";
+import { NextFunction, Response } from "express";
 import jwt, { JwtPayload } from "jsonwebtoken";
+
 import { GetUserAuthHeader } from "../models/interfaces";
-import { Response, NextFunction } from "express";
+import HttpError from "../models/http-error";
 
 const checkAuth = (
   req: GetUserAuthHeader,
@@ -23,7 +24,7 @@ const checkAuth = (
 
     const decodedToken: JwtPayload = jwt.verify(
       token,
-      `${process.env.SECRETKEY}`
+      `${process.env.JWT_SECRET_KEY}`
     ) as JwtPayload;
 
     req.userData = { userId: decodedToken.userId };

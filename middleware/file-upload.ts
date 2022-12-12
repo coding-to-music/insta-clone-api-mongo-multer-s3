@@ -1,8 +1,8 @@
+import HttpError from "../models/http-error";
+import aws from "aws-sdk";
 import multer from "multer";
 import multerS3 from "multer-s3";
 import { randomUUID } from "crypto";
-import aws from "aws-sdk";
-import HttpError from "../models/http-error";
 
 //helps multer figure out what type of file we are working with.
 const MIME_TYPE_MAP = {
@@ -14,15 +14,15 @@ const MIME_TYPE_MAP = {
 type MimeKey = keyof typeof MIME_TYPE_MAP;
 
 const s3 = new aws.S3({
-  accessKeyId: process.env.S3_ACCESS_KEY,
-  secretAccessKey: process.env.S3_SECRET_KEY,
-  region: process.env.S3_REGION,
+  accessKeyId: process.env.APP_AWS_S3_ACCESS_KEY,
+  secretAccessKey: process.env.APP_AWS_S3_SECRET_KEY,
+  region: process.env.APP_AWS_S3_REGION,
 });
 
 const fileUpload = multer({
   storage: multerS3({
     s3,
-    bucket: "insta-sham",
+    bucket: process.env.APP_AWS_S3_BUCKET_NAME,
     metadata: function (req, file, cb) {
       cb(null, { fieldName: file.fieldname });
     },

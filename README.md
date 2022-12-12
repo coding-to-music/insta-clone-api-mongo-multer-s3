@@ -13,7 +13,22 @@ https://api.insta-sham.com/
 ## Environment variables:
 
 ```java
+PORT=5000
+MONGO_URI=""
+APP_AWS_S3_ACCESS_KEY=""
+APP_AWS_S3_SECRET_KEY=""
+APP_AWS_S3_REGION=""
+APP_AWS_S3_BUCKET_NAME=""
 
+EMAIL_HOST=""
+EMAIL_SERVICE=""
+EMAIL_USER=""
+EMAIL_PASS=""
+
+FE_URL=""
+JWT_SECRET_KEY=""
+
+GOOGLE_MAPS_API_KEY=""
 ```
 
 ## GitHub

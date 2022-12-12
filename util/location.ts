@@ -1,12 +1,13 @@
-import axios from "axios";
-import HttpError from "../models/http-error";
 import "dotenv/config";
+
+import HttpError from "../models/http-error";
+import axios from "axios";
 
 export default async function getCoordsFromAddress(address: any) {
   const response = await axios.get(
     `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
       address
-    )}&key=${process.env.API_KEY}`
+    )}&key=${process.env.GOOGLE_MAPS_API_KEY}`
   );
 
   const data = response.data;
