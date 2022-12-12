@@ -1,3 +1,33 @@
+# insta-clone-api-mongo-multer-s3
+
+# 🚀 backend in node and express for insta-sham 🚀
+
+https://github.com/coding-to-music/insta-clone-api-mongo-multer-s3
+
+https://insta-clone-api-mongo-multer-s3.vercel.app
+
+From / By https://github.com/mhaslinsky/imagesbackend
+
+https://api.insta-sham.com/
+
+## Environment variables:
+
+```java
+
+```
+
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/insta-clone-api-mongo-multer-s3.git
+git push -u origin main
+```
+
 # Insta-sham (Backend)
 
 This project was my first crack at a CRUD full-stack web application. It utilizes NextJS for the front end,

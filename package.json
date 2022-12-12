@@ -1,11 +1,12 @@
 {
-  "name": "imagesappbackend",
+  "name": "insta-clone-api-mongo-multer-s3",
   "version": "1.0.0",
   "description": "",
   "main": "dist/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/app.js",
+    "deploy": "git add . && git commit -m Build && git push",
     "dev": "nodemon app.ts",
     "build": "node ./util/build.js"
   },
